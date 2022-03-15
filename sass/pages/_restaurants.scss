@@ -43,26 +43,5 @@
         i{
             font-size: 35px;
         }
-        .heart{
-            position: relative;
-            .far{
-                position: absolute;
-            }
-            .fas{
-                color: transparent;
-                background: linear-gradient(200deg, $color-primary, $color-secondary);
-                background-clip: text;
-                transform: scale(0);
-                transition: transform 0.5s;
-            }
-            &:hover{
-                .fas{
-                transform: scale(1);
-                }
-                .far{
-                    display: none;
-                }
-            }
-        }
     }
 }
