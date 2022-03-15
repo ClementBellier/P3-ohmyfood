@@ -1,0 +1,17 @@
+@mixin box-shadow ($color) {
+    @if ($color == $color-darken-lighter){
+        box-shadow: 2px 2px 8px 0 rgb($color-darken-dark, 30%);
+    } @else {
+        box-shadow: 2px 2px 8px 0 $color-darken-dark;
+    }
+    
+}
+
+
+@mixin number-card {
+    @for $i from 1 through 3 {
+        &:nth-child(#{$i}n+1)::before{
+            content: '#{$i}'
+        }
+    }
+}

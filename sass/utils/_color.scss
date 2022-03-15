@@ -1,0 +1,12 @@
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-background: white;
+
+$color-primary-light: lighten($color-primary, 35%);
+$color-tertiary-dark: darken($color-tertiary, 35%);
+
+$color-darken-lighter: darken($color-background, 5%);
+$color-darken-light: darken($color-background, 12%);
+$color-darken-dark: darken($color-background, 50%);
+$color-darken-darker: darken($color-background, 80%);

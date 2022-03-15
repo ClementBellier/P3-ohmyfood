@@ -1,0 +1,21 @@
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 0;
+    img{
+        width: 50%;
+    }
+    i{
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        font-size: 1.4em;
+        color: $color-darken-darker;
+        &:hover{
+            color: $color-primary;
+        }
+    }
+}

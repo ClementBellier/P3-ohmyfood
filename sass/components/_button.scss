@@ -1,0 +1,18 @@
+button{
+    height: 60px;
+    padding: 0 20px;
+    margin: 20px 0;
+    border-radius: 40px;
+    border: none;
+    color: $color-background;
+    line-height: 0;
+    font-weight: 500;
+    background: $color-primary;
+    background: linear-gradient(352deg, $color-primary 0%, $color-secondary 100%);
+    @include box-shadow($color-primary);
+    cursor: pointer;
+    transition: transform 0.2s;
+    &:hover{
+        transform: scale(1.1);
+    }
+}

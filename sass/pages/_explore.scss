@@ -1,0 +1,31 @@
+.explore{
+    text-align: center;
+    margin-bottom: 30px;
+    h4{
+        background-color: $color-darken-light;
+        border-top: $color-darken-dark 2px solid;
+        color: $color-darken-darker;
+        height: 70px;
+        line-height: 70px;
+        font-size: 1.2em;
+        &::before{
+            font-family: 'Font Awesome 5 Free';
+            content: '\f3c5';
+            padding-right: 15px;
+        }
+    }
+    &__intro{
+        background-color: $color-darken-lighter;
+        padding: 50px 30px;
+        h1{
+            font-size: 1.9em;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        p{
+            font-size: 1.4em;
+            color: $color-darken-dark;
+            margin-bottom: 20px;
+        }
+    }
+}

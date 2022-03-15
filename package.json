@@ -1,0 +1,12 @@
+{
+  "name": "clementbellier_3_12032022",
+  "version": "1.0.0",
+  "description": "Projet 3 ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

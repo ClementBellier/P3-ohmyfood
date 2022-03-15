@@ -1,0 +1,68 @@
+#restaurants{
+    background-color: $color-darken-lighter;
+    padding: 50px 5%;
+    h2{
+        margin-bottom: 20px;
+    }
+}
+.card-restaurant{
+    position: relative;
+    height: 65vw;
+    margin-bottom: 20px;
+    background-color: $color-background;
+    border-radius: 20px;
+    @include box-shadow($color-background);
+    transition: transform 0.2s;
+    &:hover{
+        transform: scale(1.05);
+    }
+    img{
+        border-radius: 20px 20px 0 0;
+        height: 70%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .new{
+        position: absolute;
+        right: 5%;
+        top: 5%;
+        height: 40px;
+        width: 100px;
+        line-height: 40px;
+        text-align: center;
+        font-weight: 600;
+        border-radius: 5%;
+        background-color: $color-tertiary;
+        color: $color-tertiary-dark;
+    }
+    &__description{
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        i{
+            font-size: 35px;
+        }
+        .heart{
+            position: relative;
+            .far{
+                position: absolute;
+            }
+            .fas{
+                color: transparent;
+                background: linear-gradient(200deg, $color-primary, $color-secondary);
+                background-clip: text;
+                transform: scale(0);
+                transition: transform 0.5s;
+            }
+            &:hover{
+                .fas{
+                transform: scale(1);
+                }
+                .far{
+                    display: none;
+                }
+            }
+        }
+    }
+}
