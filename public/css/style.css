@@ -35,6 +35,26 @@ button:hover {
   transform: scale(1.1);
 }
 
+.heart {
+  position: relative;
+}
+.heart .far {
+  position: absolute;
+}
+.heart .fas {
+  color: transparent;
+  background: linear-gradient(200deg, #9356DC, #FF79DA);
+  background-clip: text;
+  transform: scale(0);
+  transition: transform 0.5s;
+}
+.heart:hover .fas {
+  transform: scale(1);
+}
+.heart:hover .far {
+  display: none;
+}
+
 body {
   font-family: "Roboto";
   font-size: 18px;
@@ -194,24 +214,22 @@ header i:hover {
 .card-restaurant__description i {
   font-size: 35px;
 }
-.card-restaurant__description .heart {
-  position: relative;
+
+.title img {
+  width: 100%;
+  z-index: -1;
 }
-.card-restaurant__description .heart .far {
-  position: absolute;
+.title__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: -60px;
+  padding: 20px;
+  border-radius: 50px 50px 0 0;
+  background-color: white;
 }
-.card-restaurant__description .heart .fas {
-  color: transparent;
-  background: linear-gradient(200deg, #9356DC, #FF79DA);
-  background-clip: text;
-  transform: scale(0);
-  transition: transform 0.5s;
-}
-.card-restaurant__description .heart:hover .fas {
-  transform: scale(1);
-}
-.card-restaurant__description .heart:hover .far {
-  display: none;
+.title__text h1 {
+  font-family: "Shrikhand";
 }
 
 footer {
