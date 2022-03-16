@@ -29,10 +29,31 @@ button {
   box-shadow: 2px 2px 8px 0 gray;
   cursor: pointer;
   transition: transform 0.2s;
+  position: relative;
+  z-index: 1;
 }
-button:hover {
+button:hover::after {
+  opacity: 1;
+}
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 40px;
+  z-index: -1;
   box-shadow: 2px 2px 12px 0 rgba(51, 51, 51, 0.8);
   background: linear-gradient(352deg, #8641d8 0%, #ff93e1 100%);
+  opacity: 0;
+}
+
+.command {
+  display: block;
+  margin: auto;
+  width: 50%;
+  min-width: fit-content;
 }
 
 .heart {
@@ -66,6 +87,7 @@ body {
 
 main {
   background-color: #f2f2f2;
+  padding-bottom: 80px;
 }
 
 header {
@@ -213,14 +235,17 @@ header i:hover {
   color: #2c9c81;
 }
 .card-restaurant__description {
-  padding: 15px;
+  padding: 4%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 4vw;
 }
 
 .title img {
   width: 100%;
+  max-height: 450px;
+  object-fit: cover;
   overflow: hidden;
 }
 .title__text {
@@ -228,13 +253,14 @@ header i:hover {
   justify-content: space-between;
   align-items: baseline;
   margin-top: -60px;
-  padding: 20px;
+  padding: 40px 5% 10px;
   border-radius: 50px 50px 0 0;
   background-color: #f2f2f2;
   position: relative;
 }
 .title__text h1 {
   font-family: "Shrikhand";
+  font-size: 6vw;
 }
 
 .meal {
@@ -264,15 +290,17 @@ header i:hover {
   background: white;
   border-radius: 20px;
   height: 80px;
-  padding: 15px 15px;
   margin: 15px 0;
   overflow: hidden;
   box-shadow: 2px 2px 8px 0 rgba(128, 128, 128, 0.3);
 }
 .meal__card--text {
   font-size: 1.1em;
-  width: 100%;
+  width: 88%;
+  padding: 15px 0 15px 15px;
   overflow: hidden;
+  flex-shrink: 0;
+  transition: flex-shrink 0.5s;
 }
 .meal__card--text h3 {
   margin-bottom: 5px;
@@ -292,12 +320,31 @@ header i:hover {
   height: 100%;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  transform: translateX(50%);
+  text-align: center;
 }
 .meal__card--price-check p {
   align-self: flex-end;
+  flex-grow: 1;
+  padding-bottom: 15px;
 }
+.meal__card--price-check div {
+  flex-grow: 1;
+  background-color: #99E2D0;
+  color: white;
+  line-height: 80px;
+  font-size: 1.5em;
+}
+.meal__card--price-check div i {
+  transform: rotate(-1turn);
+  transition: transform 0.5s 0.1s;
+}
+.meal__card:hover .meal__card--text {
+  flex-shrink: 1;
+}
+.meal__card:hover .meal__card--price-check i {
+  transform: rotate(0);
+}
+
 footer {
   background-color: #333333;
   color: white;

@@ -35,9 +35,10 @@
         color: $color-tertiary-dark;
     }
     &__description{
-        padding: 15px;
+        padding: 4%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        font-size: 4vw;
     }
 }
