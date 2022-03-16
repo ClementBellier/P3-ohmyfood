@@ -1,6 +1,7 @@
 @import "./base/reset";
 @import "./base/fonts";
 @import "./utils/color";
+@import "./utils/variables";
 @import "./utils/mixins";
 @import "./components/button";
 @import "./components/heart";
@@ -10,4 +11,5 @@
 @import "./pages/operating";
 @import "./pages/restaurants";
 @import "./layouts/title";
+@import "./layouts/meal";
 @import "./layouts/footer";

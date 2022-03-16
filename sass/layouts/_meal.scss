@@ -1,0 +1,67 @@
+.meal{
+    width: 95%;
+    margin: auto;
+    margin-bottom: 50px;
+    h2{
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 1.1em;
+        padding-bottom: 10px;
+        margin: 20px 0 10px;
+        position: relative;
+        &::before{
+            content: '';
+            width: 50px;
+            border-bottom: $color-tertiary 4px solid;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    &__card{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $color-background;
+        border-radius: 20px;
+        height: 80px;
+        padding: 15px 15px;
+        margin: 15px 0;
+        overflow: hidden;
+        @include box-shadow($color-darken-lighter);
+        &--text{
+            font-size: 1.1em;
+            width: 100%;
+            overflow: hidden;
+            h3{
+                margin-bottom: 5px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            p{
+                font-weight: 300;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        &--price-check{
+            width: 25%;
+            flex-shrink: 0;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            transform: translateX(50%);
+            p{
+                align-self: flex-end;
+            }
+            i{
+
+            }
+        }
+        &:hover{
+
+        }
+    }
+}

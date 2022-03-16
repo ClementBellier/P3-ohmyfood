@@ -1,10 +1,17 @@
-@mixin box-shadow ($color) {
-    @if ($color == $color-darken-lighter){
-        box-shadow: 2px 2px 8px 0 rgb($color-darken-dark, 30%);
-    } @else {
-        box-shadow: 2px 2px 8px 0 $color-darken-dark;
+@mixin box-shadow ($color-parametre) {
+    $blur: 8px;
+    $color: $color-darken-dark;
+    $opacity: 100%;
+    @if ($color-parametre == 'hover'){
+        $blur: 12px;
+        $color: $color-darken-darker;
+        $opacity: 80%;
+    }@else{
+        @if ($color-parametre == $color-darken-lighter){
+            $opacity: 30%;
+        }
     }
-    
+    box-shadow: 2px 2px $blur 0 rgb($color, $opacity);
 }
 
 
