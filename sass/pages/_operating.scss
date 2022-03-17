@@ -8,37 +8,35 @@
         position: relative;
         margin-bottom: map-get($sizes, large);
         margin-left: map-get($sizes, percent);
-        height: 70px;
         width: auto;
-        line-height: 70px;
+        @include vertical-center(70px);
         background-color: $color-darken-lighter;
         border-radius: map-get($sizes, base);
         font-weight: 500;
         @include box-shadow($color-darken-lighter);
         @include number-content;
         @media (max-width: 360px) {
-            font-size: 0.8em;
+            font-size: map-get($font-sizes , small);
         }
         i{
             margin-left: map-get($sizes, smaller);
             color: $color-darken-dark;
-            font-size: 1.1em;
+            font-size: map-get($font-sizes , base-plus);
             width: 15%;
             text-align: center;
             display: inline-block;
         }
         &::before{
+            @include vertical-center(25px);
             display: block;
             position: absolute;
             bottom: 50%;
             transform: translateY(50%) translateX(-50%);
-            height: 25px;
             width: 25px;
             background-color: $color-primary;
             color: $color-background;
             border-radius: 50%;
-            font-size: 12px;
-            line-height: 25px;
+            font-size: map-get($font-sizes , before);
             text-align: center;
         }
         &:last-child{

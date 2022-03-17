@@ -16,7 +16,7 @@
         position: relative;
         h1{
             font-family: 'Shrikhand';
-            font-size: 6vw;
+            font-size: map-get($font-sizes , menu-title);
         }
     }
 }

@@ -1,10 +1,10 @@
 .heart{
     position: relative;
-    font-size: 35px;
+    cursor: pointer;
+    font-size: map-get($font-sizes , heart);
     .far{
         position: absolute;
-        transition: opacity 0.3s;
-        transition-delay: 0.2s;
+        transition: opacity 0.3s 0.2s;
     }
     .fas{
         color: transparent;

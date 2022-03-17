@@ -16,6 +16,69 @@ a {
   text-decoration: none;
 }
 
+.loader {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e0e0e0;
+  animation: load 3s forwards;
+}
+.loader .dot {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 100%;
+  animation: loading 1s infinite;
+}
+.loader .dot:nth-child(1) {
+  animation-delay: 0.1s;
+  background: #9472da;
+}
+.loader .dot:nth-child(2) {
+  animation-delay: 0.2s;
+  background: #958ed7;
+}
+.loader .dot:nth-child(3) {
+  animation-delay: 0.3s;
+  background: #97aad5;
+}
+.loader .dot:nth-child(4) {
+  animation-delay: 0.4s;
+  background: #98c6d2;
+}
+.loader .dot:nth-child(5) {
+  animation-delay: 0.5s;
+  background: #99e2d0;
+}
+
+@keyframes load {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+@keyframes loading {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 button {
   height: 60px;
   padding: 0 20px;
@@ -53,12 +116,12 @@ button::after {
 
 .heart {
   position: relative;
+  cursor: pointer;
   font-size: 35px;
 }
 .heart .far {
   position: absolute;
-  transition: opacity 0.3s;
-  transition-delay: 0.2s;
+  transition: opacity 0.3s 0.2s;
 }
 .heart .fas {
   color: transparent;
@@ -89,7 +152,7 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: 10px 0;
+  padding: 10px 0;
 }
 header img {
   width: 50%;
@@ -115,7 +178,7 @@ header i:hover {
   color: #333333;
   height: 70px;
   line-height: 70px;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 .explore h4::before {
   font-family: "Font Awesome 5 Free";
@@ -148,8 +211,8 @@ header i:hover {
   position: relative;
   margin-bottom: 30px;
   margin-left: 5%;
-  height: 70px;
   width: auto;
+  height: 70px;
   line-height: 70px;
   background-color: #f2f2f2;
   border-radius: 20px;
@@ -179,17 +242,17 @@ header i:hover {
   display: inline-block;
 }
 .operating__card::before {
+  height: 25px;
+  line-height: 25px;
   display: block;
   position: absolute;
   bottom: 50%;
   transform: translateY(50%) translateX(-50%);
-  height: 25px;
   width: 25px;
   background-color: #9356DC;
   color: white;
   border-radius: 50%;
   font-size: 12px;
-  line-height: 25px;
   text-align: center;
 }
 .operating__card:last-child {
@@ -225,12 +288,12 @@ header i:hover {
   object-fit: cover;
 }
 .card-restaurant .new {
+  height: 40px;
+  line-height: 40px;
   position: absolute;
   right: 5%;
   top: 5%;
-  height: 40px;
   width: 100px;
-  line-height: 40px;
   text-align: center;
   font-weight: 600;
   border-radius: 5%;
@@ -269,11 +332,11 @@ header i:hover {
 .meal {
   width: 95%;
   margin: 20px auto 50px;
+  font-size: 1.1em;
 }
 .meal h2 {
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 1.1em;
   padding-bottom: 10px;
   position: relative;
 }
@@ -297,7 +360,6 @@ header i:hover {
   box-shadow: 2px 2px 8px 0 rgba(128, 128, 128, 0.3);
 }
 .meal__card--text {
-  font-size: 1.1em;
   width: 88%;
   padding: 15px;
   padding-right: 0;
@@ -330,12 +392,12 @@ header i:hover {
   padding-bottom: 15px;
 }
 .meal__card--price-check div {
+  height: 80px;
+  line-height: 80px;
   flex-grow: 1;
   background-color: #99E2D0;
   color: white;
-  height: 80px;
-  line-height: 80px;
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 .meal__card--price-check div i {
   transform: rotate(-1turn);

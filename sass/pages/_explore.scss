@@ -4,9 +4,8 @@
         background-color: $color-darken-light;
         border-top: $color-darken-dark 2px solid;
         color: $color-darken-darker;
-        height: 70px;
-        line-height: 70px;
-        font-size: 1.2em;
+        @include vertical-center(70px);
+        font-size: map-get($font-sizes , base-plus);
         &::before{
             font-family: 'Font Awesome 5 Free';
             content: '\f3c5';
@@ -17,13 +16,13 @@
         background-color: $color-darken-lighter;
         padding: map-get($sizes, larger) map-get($sizes, percent);
         h1{
-            font-size: 1.9em;
+            font-size: map-get($font-sizes , larger);
             font-weight: 700;
             margin: map-get($sizes, base) auto;
             width: 75%;
         }
         p{
-            font-size: 1.4em;
+            font-size: map-get($font-sizes , large);
             color: $color-darken-dark;
         }
     }

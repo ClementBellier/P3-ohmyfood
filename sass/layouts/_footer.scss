@@ -4,7 +4,7 @@ footer{
     padding: map-get($sizes, base) map-get($sizes, large);
     h2{
         font-family: 'Shrikhand';
-        font-size: 1.4em;
+        font-size: map-get($font-sizes , large);
         font-weight: 100;
         margin: map-get($sizes, base) 0;
         &:hover{

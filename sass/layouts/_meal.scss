@@ -1,10 +1,10 @@
 .meal{
     width: 95%;
     margin: map-get($sizes, base) auto map-get($sizes, larger);
+    font-size: map-get($font-sizes , base-plus);
     h2{
         text-transform: uppercase;
         font-weight: 300;
-        font-size: 1.1em;
         padding-bottom: map-get($sizes, smaller);
         position: relative;
         &::before{
@@ -27,7 +27,6 @@
         overflow: hidden;
         @include box-shadow($color-darken-lighter);
         &--text{
-            font-size: 1.1em;
             width: 88%;
             padding: map-get($sizes, small);
             padding-right: 0;
@@ -59,12 +58,11 @@
                 padding-bottom: map-get($sizes, small);
             }
             div{
+                @include vertical-center(80px);
                 flex-grow: 1;
                 background-color: $color-tertiary;
                 color: $color-background;
-                height: 80px;
-                line-height: 80px;
-                font-size: 1.5em;
+                font-size: map-get($font-sizes , large);
                 i{
                     transform: rotate(-1turn);
                     transition: transform 0.5s 0.1s;

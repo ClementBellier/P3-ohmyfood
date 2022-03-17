@@ -22,12 +22,11 @@
         object-fit: cover;
     }
     .new{
+        @include vertical-center(40px);
         position: absolute;
         right: 5%;
         top: 5%;
-        height: 40px;
         width: 100px;
-        line-height: 40px;
         text-align: center;
         font-weight: 600;
         border-radius: map-get($sizes, percent);
@@ -39,6 +38,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-size: 4vw;
+        font-size: map-get($font-sizes , card-text);
     }
 }
