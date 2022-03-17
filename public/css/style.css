@@ -36,35 +36,31 @@ a {
 }
 .loader .dot:nth-child(1) {
   animation-delay: 0.1s;
-  background: #9472da;
+  background: #a95ddc;
 }
 .loader .dot:nth-child(2) {
   animation-delay: 0.2s;
-  background: #958ed7;
+  background: #be64db;
 }
 .loader .dot:nth-child(3) {
   animation-delay: 0.3s;
-  background: #97aad5;
+  background: #d46bdb;
 }
 .loader .dot:nth-child(4) {
   animation-delay: 0.4s;
-  background: #98c6d2;
+  background: #e972da;
 }
 .loader .dot:nth-child(5) {
   animation-delay: 0.5s;
-  background: #99e2d0;
+  background: #ff79da;
 }
 
 @keyframes load {
-  0% {
-    opacity: 1;
-  }
   80% {
-    opacity: 1;
+    transform: translateY(0);
   }
   100% {
-    opacity: 0;
-    z-index: 0;
+    transform: translateY(-100vh);
   }
 }
 @keyframes loading {

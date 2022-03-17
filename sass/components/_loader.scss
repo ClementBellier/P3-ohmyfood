@@ -17,16 +17,15 @@
       @for $i from 1 through 5{
       &:nth-child(#{$i}){
         animation-delay: 0.1s * $i;
-        background: mix($color-tertiary, $color-primary, $i * 20%);
+        background: mix($color-secondary, $color-primary, $i * 20%);
         }
       }
     }
   }
 
 @keyframes load {
-  0%{opacity: 1}
-  80%{opacity: 1;}
-  100%{opacity: 0; z-index: 0;}
+  80%{transform: translateY(0);}
+  100%{transform: translateY(-100vh);}
 }  
 @keyframes loading{
   0%{transform: scale(1);}
