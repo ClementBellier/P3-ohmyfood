@@ -1,19 +1,18 @@
 footer{
     background-color: $color-darken-darker;
     color: $color-background;
-    padding: 20px 35px;
-    font-size: 1em;
+    padding: map-get($sizes, base) map-get($sizes, large);
     h2{
         font-family: 'Shrikhand';
         font-size: 1.4em;
         font-weight: 100;
-        margin: 20px 0;
+        margin: map-get($sizes, base) 0;
         &:hover{
             color: $color-primary;
         }
     }
     li{
-        margin-bottom: 10px;
+        margin-bottom: map-get($sizes, smaller);
         font-weight: 500;
         &::before{
             display: inline-block;

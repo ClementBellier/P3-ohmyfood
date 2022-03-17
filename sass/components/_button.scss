@@ -1,11 +1,10 @@
 button{
     height: 60px;
-    padding: 0 20px;
-    margin: 20px 0;
-    border-radius: 40px;
+    padding: 0 map-get($sizes, base);
+    margin: map-get($sizes, base) auto;
+    border-radius: map-get($sizes, large);
     border: none;
     color: $color-background;
-    line-height: 0;
     font-weight: 500;
     background: $color-btn;
     @include box-shadow($color-primary);
@@ -13,6 +12,9 @@ button{
     transition: transform 0.2s;
     position: relative;
     z-index: 1;
+    display: block;
+    width: 50%;
+    min-width: fit-content;
     &:hover{
         &::after{
             opacity: 1;
@@ -25,16 +27,10 @@ button{
         right: 0;
         bottom: 0;
         left: 0;
-        border-radius: 40px;
+        border-radius: map-get($sizes, large);
         z-index: -1;
         @include box-shadow('hover');
         background: $color-btn-hover;
         opacity: 0;
     }
-}
-.command{
-    display: block;
-    margin: auto;
-    width: 50%;
-    min-width: fit-content;
 }

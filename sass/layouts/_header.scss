@@ -3,7 +3,7 @@ header{
     justify-content: center;
     align-items: center;
     position: relative;
-    margin: 10px 0;
+    margin: map-get($sizes, smaller) 0;
     img{
         width: 50%;
     }

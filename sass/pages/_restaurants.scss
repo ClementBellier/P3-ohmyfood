@@ -1,22 +1,22 @@
 #restaurants{
-    padding: 50px 5%;
+    padding: map-get($sizes, larger) map-get($sizes, percent);
     h2{
-        margin-bottom: 20px;
+        margin-bottom: map-get($sizes, base);
     }
 }
 .card-restaurant{
     position: relative;
     height: 65vw;
-    margin-bottom: 20px;
+    margin-bottom: map-get($sizes, base);
     background-color: $color-background;
-    border-radius: 20px;
+    border-radius: map-get($sizes, base);
     @include box-shadow($color-background);
     transition: transform 0.2s;
     &:hover{
         @include box-shadow('hover');
     }
     img{
-        border-radius: 20px 20px 0 0;
+        border-radius: map-get($sizes, base) map-get($sizes, base) 0 0;
         height: 70%;
         width: 100%;
         object-fit: cover;
@@ -30,7 +30,7 @@
         line-height: 40px;
         text-align: center;
         font-weight: 600;
-        border-radius: 5%;
+        border-radius: map-get($sizes, percent);
         background-color: $color-tertiary;
         color: $color-tertiary-dark;
     }

@@ -1,23 +1,31 @@
 .operating{
-    padding: 0 5%;
-    margin: 50px 0;
+    padding: 0 map-get($sizes, percent);
+    margin: map-get($sizes, larger) 0;
     h2{
-        margin-bottom: 30px;
+        margin-bottom: map-get($sizes, large);
     }
     &__card{
         position: relative;
-        margin: 0 0 30px 20px;
+        margin-bottom: map-get($sizes, large);
+        margin-left: map-get($sizes, percent);
         height: 70px;
-        width: 90%;
+        width: auto;
         line-height: 70px;
         background-color: $color-darken-lighter;
-        border-radius: 25px;
+        border-radius: map-get($sizes, base);
         font-weight: 500;
         @include box-shadow($color-darken-lighter);
-        @include number-card;
+        @include number-content;
+        @media (max-width: 360px) {
+            font-size: 0.8em;
+        }
         i{
-            margin: 0 30px 0 40px;
+            margin-left: map-get($sizes, smaller);
             color: $color-darken-dark;
+            font-size: 1.1em;
+            width: 15%;
+            text-align: center;
+            display: inline-block;
         }
         &::before{
             display: block;
