@@ -44,7 +44,7 @@ main {
   border-radius: 100%;
 }
 .loader .dot:nth-child(1) {
-  animation: loading 0.8s 0.08s 3, up-1 0.8s 2.4s cubic-bezier(0.68, -0.55, 0.9, 0.76) forwards;
+  animation: loading 0.8s 0.08s 3, up-1 0.8s 2.4s cubic-bezier(0.68, -0.55, 0.9, 0.76) both;
   background: #f5d3f4;
   box-shadow: 2px 2px 8px 0 gray;
 }
@@ -57,7 +57,7 @@ main {
   }
 }
 .loader .dot:nth-child(2) {
-  animation: loading 0.8s 0.16s 3, up-2 0.8s 2.4s cubic-bezier(0.68, -0.55, 0.9, 0.76) forwards;
+  animation: loading 0.8s 0.16s 3, up-2 0.8s 2.4s cubic-bezier(0.68, -0.55, 0.9, 0.76) both;
   background: #f7bdee;
   box-shadow: 2px 2px 8px 0 gray;
 }
@@ -70,7 +70,7 @@ main {
   }
 }
 .loader .dot:nth-child(3) {
-  animation: loading 0.8s 0.24s 3, up-3 0.8s 2.4s cubic-bezier(0.68, -0.55, 0.9, 0.76) forwards;
+  animation: loading 0.8s 0.24s 3, up-3 0.8s 2.4s cubic-bezier(0.68, -0.55, 0.9, 0.76) both;
   background: #faa6e7;
   box-shadow: 2px 2px 8px 0 gray;
 }
@@ -83,7 +83,7 @@ main {
   }
 }
 .loader .dot:nth-child(4) {
-  animation: loading 0.8s 0.32s 3, up-4 0.8s 2.4s cubic-bezier(0.68, -0.55, 0.9, 0.76) forwards;
+  animation: loading 0.8s 0.32s 3, up-4 0.8s 2.4s cubic-bezier(0.68, -0.55, 0.9, 0.76) both;
   background: #fc90e1;
   box-shadow: 2px 2px 8px 0 gray;
 }
@@ -96,7 +96,7 @@ main {
   }
 }
 .loader .dot:nth-child(5) {
-  animation: loading 0.8s 0.4s 3, up-5 0.8s 2.4s cubic-bezier(0.68, -0.55, 0.9, 0.76) forwards;
+  animation: loading 0.8s 0.4s 3, up-5 0.8s 2.4s cubic-bezier(0.68, -0.55, 0.9, 0.76) both;
   background: #ff79da;
   box-shadow: 2px 2px 8px 0 gray;
 }
