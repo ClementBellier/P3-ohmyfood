@@ -6,28 +6,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: $color-darken-light;
-    animation: load 3s forwards;
+    background: $color-primary;
+    animation: load 0.3s 3s both;
     .dot{
       width: 30px;
       height: 30px;
-      margin-right: 10px;
       border-radius: 100%;
-      animation: loading 1s infinite;
       @for $i from 1 through 5{
       &:nth-child(#{$i}){
-        animation-delay: 0.1s * $i;
-        background: mix($color-tertiary, $color-primary, $i * 20%);
+        animation: loading 0.8s (0.08s * $i) 3, up-#{$i} 0.8s 2.4s cubic-bezier(0.68,-0.55, 0.9, 0.76) forwards;
+        background: mix($color-secondary, $color-primary-light, $i * 20%);
+        @include box-shadow($color-primary);
+        @at-root{
+          @keyframes up-#{$i} {
+            30%{transform: scale(1,0.9) translateY(nth($dot-down, $i));}
+            100%{transform: scale(0.8,1) translateY(nth($dot-up, $i));}
+          }
         }
       }
     }
   }
-
+}
 @keyframes load {
-  0%{opacity: 1}
-  80%{opacity: 1;}
-  100%{opacity: 0; z-index: 0;}
-}  
+  0%{transform: translateY(0);}
+  100%{transform: translateY(-100vh);}
+}
+
 @keyframes loading{
   0%{transform: scale(1);}
   50%{opacity: 0.5; transform: scale(2);}

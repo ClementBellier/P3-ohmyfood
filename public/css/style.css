@@ -16,6 +16,17 @@ a {
   text-decoration: none;
 }
 
+body {
+  font-family: "Roboto";
+  font-size: 18px;
+  background-color: white;
+}
+
+main {
+  background-color: #f2f2f2;
+  padding-bottom: 80px;
+}
+
 .loader {
   position: absolute;
   width: 100vw;
@@ -24,47 +35,86 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #e0e0e0;
-  animation: load 3s forwards;
+  background: #9356DC;
+  animation: load 0.3s 3s both;
 }
 .loader .dot {
   width: 30px;
   height: 30px;
-  margin-right: 10px;
   border-radius: 100%;
-  animation: loading 1s infinite;
 }
 .loader .dot:nth-child(1) {
-  animation-delay: 0.1s;
-  background: #9472da;
+  animation: loading 0.8s 0.08s 3, up-1 0.8s 2.4s cubic-bezier(0.68, -0.55, 0.9, 0.76) forwards;
+  background: #f5d3f4;
+  box-shadow: 2px 2px 8px 0 gray;
+}
+@keyframes up-1 {
+  30% {
+    transform: scale(1, 0.9) translateY(5vh);
+  }
+  100% {
+    transform: scale(0.8, 1) translateY(0);
+  }
 }
 .loader .dot:nth-child(2) {
-  animation-delay: 0.2s;
-  background: #958ed7;
+  animation: loading 0.8s 0.16s 3, up-2 0.8s 2.4s cubic-bezier(0.68, -0.55, 0.9, 0.76) forwards;
+  background: #f7bdee;
+  box-shadow: 2px 2px 8px 0 gray;
+}
+@keyframes up-2 {
+  30% {
+    transform: scale(1, 0.9) translateY(2.5vh);
+  }
+  100% {
+    transform: scale(0.8, 1) translateY(-5vh);
+  }
 }
 .loader .dot:nth-child(3) {
-  animation-delay: 0.3s;
-  background: #97aad5;
+  animation: loading 0.8s 0.24s 3, up-3 0.8s 2.4s cubic-bezier(0.68, -0.55, 0.9, 0.76) forwards;
+  background: #faa6e7;
+  box-shadow: 2px 2px 8px 0 gray;
+}
+@keyframes up-3 {
+  30% {
+    transform: scale(1, 0.9) translateY(0);
+  }
+  100% {
+    transform: scale(0.8, 1) translateY(-10vh);
+  }
 }
 .loader .dot:nth-child(4) {
-  animation-delay: 0.4s;
-  background: #98c6d2;
+  animation: loading 0.8s 0.32s 3, up-4 0.8s 2.4s cubic-bezier(0.68, -0.55, 0.9, 0.76) forwards;
+  background: #fc90e1;
+  box-shadow: 2px 2px 8px 0 gray;
+}
+@keyframes up-4 {
+  30% {
+    transform: scale(1, 0.9) translateY(2.5vh);
+  }
+  100% {
+    transform: scale(0.8, 1) translateY(-5vh);
+  }
 }
 .loader .dot:nth-child(5) {
-  animation-delay: 0.5s;
-  background: #99e2d0;
+  animation: loading 0.8s 0.4s 3, up-5 0.8s 2.4s cubic-bezier(0.68, -0.55, 0.9, 0.76) forwards;
+  background: #ff79da;
+  box-shadow: 2px 2px 8px 0 gray;
+}
+@keyframes up-5 {
+  30% {
+    transform: scale(1, 0.9) translateY(5vh);
+  }
+  100% {
+    transform: scale(0.8, 1) translateY(0);
+  }
 }
 
 @keyframes load {
   0% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
+    transform: translateY(0);
   }
   100% {
-    opacity: 0;
-    z-index: 0;
+    transform: translateY(-100vh);
   }
 }
 @keyframes loading {
@@ -135,16 +185,6 @@ button::after {
 }
 .heart:hover .far {
   opacity: 0;
-}
-
-body {
-  font-family: "Roboto";
-  font-size: 18px;
-}
-
-main {
-  background-color: #f2f2f2;
-  padding-bottom: 80px;
 }
 
 header {

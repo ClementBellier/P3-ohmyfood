@@ -17,3 +17,7 @@ $font-sizes:(
     menu-title: 6vw,
     card-text: 4vw
 );
+
+// Pour l'animation du loader
+$dot-down: (5vh, 2.5vh, 0, 2.5vh, 5vh);
+$dot-up: (0, -5vh, -10vh, -5vh, 0);

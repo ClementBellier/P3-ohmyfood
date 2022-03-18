@@ -1,6 +1,7 @@
 body{
     font-family: 'Roboto';
     font-size: map-get($font-sizes , base);
+    background-color: $color-background;
 }
 main{
     background-color: $color-darken-lighter;
