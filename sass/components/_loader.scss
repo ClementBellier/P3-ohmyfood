@@ -6,15 +6,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: $color-primary;
-    animation: load 0.3s 3s both;
+    background: $color-btn;
+    animation: load 0.3s 1.8s both;
     .dot{
       width: 30px;
       height: 30px;
       border-radius: 100%;
       @for $i from 1 through 5{
       &:nth-child(#{$i}){
-        animation: loading 0.8s (0.08s * $i) 3, up-#{$i} 0.8s 2.4s cubic-bezier(0.68,-0.55, 0.9, 0.76) both;
+        animation: loading 0.7s (0.08s * $i) 2, up-#{$i} 0.8s 1.2s cubic-bezier(0.68,-0.55, 0.9, 0.76) both;
         background: mix($color-secondary, $color-tertiary, $i * 20%);
         @include box-shadow($color-primary);
         @at-root{

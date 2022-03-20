@@ -7,3 +7,24 @@ main{
     background-color: $color-darken-lighter;
     padding-bottom: 80px;
 }
+main{
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 992px) {
+    main{
+        flex-flow: row wrap;
+        justify-content: space-around;
+        .card-restaurant{
+            width: 45%;
+        }
+        .meal{
+            width: 30%;
+        }
+        // button{
+        //     align-self: center;
+        //     width: 40%;
+        // }
+        h2{ width: 95%;}
+    }
+}

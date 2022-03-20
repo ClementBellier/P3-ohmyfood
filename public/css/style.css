@@ -27,6 +27,26 @@ main {
   padding-bottom: 80px;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  main {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  main .card-restaurant {
+    width: 45%;
+  }
+  main .meal {
+    width: 30%;
+  }
+  main h2 {
+    width: 95%;
+  }
+}
 .loader {
   position: absolute;
   width: 100vw;
@@ -35,8 +55,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #9356DC;
-  animation: load 0.3s 3s both;
+  background: linear-gradient(352deg, #9356DC 0%, #FF79DA 100%);
+  animation: load 0.3s 1.8s both;
 }
 .loader .dot {
   width: 30px;
@@ -44,7 +64,7 @@ main {
   border-radius: 100%;
 }
 .loader .dot:nth-child(1) {
-  animation: loading 0.8s 0.08s 3, up-1 0.8s 2.4s cubic-bezier(0.68, -0.55, 0.9, 0.76) both;
+  animation: loading 0.7s 0.08s 2, up-1 0.8s 1.2s cubic-bezier(0.68, -0.55, 0.9, 0.76) both;
   background: #adcdd2;
   box-shadow: 2px 2px 8px 0 gray;
 }
@@ -57,7 +77,7 @@ main {
   }
 }
 .loader .dot:nth-child(2) {
-  animation: loading 0.8s 0.16s 3, up-2 0.8s 2.4s cubic-bezier(0.68, -0.55, 0.9, 0.76) both;
+  animation: loading 0.7s 0.16s 2, up-2 0.8s 1.2s cubic-bezier(0.68, -0.55, 0.9, 0.76) both;
   background: #c2b8d4;
   box-shadow: 2px 2px 8px 0 gray;
 }
@@ -70,7 +90,7 @@ main {
   }
 }
 .loader .dot:nth-child(3) {
-  animation: loading 0.8s 0.24s 3, up-3 0.8s 2.4s cubic-bezier(0.68, -0.55, 0.9, 0.76) both;
+  animation: loading 0.7s 0.24s 2, up-3 0.8s 1.2s cubic-bezier(0.68, -0.55, 0.9, 0.76) both;
   background: #d6a3d6;
   box-shadow: 2px 2px 8px 0 gray;
 }
@@ -83,7 +103,7 @@ main {
   }
 }
 .loader .dot:nth-child(4) {
-  animation: loading 0.8s 0.32s 3, up-4 0.8s 2.4s cubic-bezier(0.68, -0.55, 0.9, 0.76) both;
+  animation: loading 0.7s 0.32s 2, up-4 0.8s 1.2s cubic-bezier(0.68, -0.55, 0.9, 0.76) both;
   background: #eb8ed8;
   box-shadow: 2px 2px 8px 0 gray;
 }
@@ -96,7 +116,7 @@ main {
   }
 }
 .loader .dot:nth-child(5) {
-  animation: loading 0.8s 0.4s 3, up-5 0.8s 2.4s cubic-bezier(0.68, -0.55, 0.9, 0.76) both;
+  animation: loading 0.7s 0.4s 2, up-5 0.8s 1.2s cubic-bezier(0.68, -0.55, 0.9, 0.76) both;
   background: #ff79da;
   box-shadow: 2px 2px 8px 0 gray;
 }
@@ -167,24 +187,22 @@ button::after {
 .heart {
   position: relative;
   cursor: pointer;
-  font-size: 35px;
+  font-size: min(35px, 7vw);
 }
 .heart .far {
   position: absolute;
-  transition: opacity 0.3s 0.2s;
+  top: 1px;
 }
 .heart .fas {
   color: transparent;
   background: linear-gradient(200deg, #9356DC, #FF79DA);
   background-clip: text;
+  -webkit-background-clip: text;
   transform: scale(0);
   transition: transform 0.3s ease-in;
 }
 .heart:hover .fas {
-  transform: scale(1);
-}
-.heart:hover .far {
-  opacity: 0;
+  transform: scale(1.1);
 }
 
 header {
@@ -195,7 +213,7 @@ header {
   padding: 10px 0;
 }
 header img {
-  width: 50%;
+  width: min(250px, 50%);
 }
 header i {
   position: absolute;
@@ -311,7 +329,7 @@ header i:hover {
 
 .card-restaurant {
   position: relative;
-  height: 65vw;
+  height: 325px;
   margin-bottom: 20px;
   background-color: white;
   border-radius: 20px;
@@ -341,11 +359,11 @@ header i:hover {
   color: #2c9c81;
 }
 .card-restaurant__description {
-  padding: 4%;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 4vw;
+  font-size: 20px;
 }
 
 .title img {
@@ -366,59 +384,71 @@ header i:hover {
 }
 .title__text h1 {
   font-family: "Shrikhand";
-  font-size: 6vw;
+  font-size: min(7vw, 50px);
 }
 
 .meal {
   width: 95%;
-  margin: 20px auto 50px;
+  margin: 20px auto 0;
   font-size: 1.1em;
-  animation: appears 0.3s ease-in-out both;
+  animation: appears 350ms ease-in-out both;
 }
 .meal:nth-child(2) {
-  animation-delay: 0s;
+  animation-delay: 0ms;
 }
 .meal:nth-child(2) .meal__card:nth-child(2) {
-  animation: appears 0.3s ease-in-out both;
-  animation-delay: 0.4s;
+  animation: appears 500ms ease-in-out both;
+  animation-delay: 260ms;
 }
 .meal:nth-child(2) .meal__card:nth-child(3) {
-  animation: appears 0.3s ease-in-out both;
-  animation-delay: 0.6s;
+  animation: appears 500ms ease-in-out both;
+  animation-delay: 390ms;
 }
 .meal:nth-child(2) .meal__card:nth-child(4) {
-  animation: appears 0.3s ease-in-out both;
-  animation-delay: 0.8s;
+  animation: appears 500ms ease-in-out both;
+  animation-delay: 520ms;
+}
+.meal:nth-child(2) .meal__card:nth-child(5) {
+  animation: appears 500ms ease-in-out both;
+  animation-delay: 650ms;
 }
 .meal:nth-child(3) {
-  animation-delay: 0.4s;
+  animation-delay: 775ms;
 }
 .meal:nth-child(3) .meal__card:nth-child(2) {
-  animation: appears 0.3s ease-in-out both;
-  animation-delay: 0.8s;
+  animation: appears 500ms ease-in-out both;
+  animation-delay: 1035ms;
 }
 .meal:nth-child(3) .meal__card:nth-child(3) {
-  animation: appears 0.3s ease-in-out both;
-  animation-delay: 1s;
+  animation: appears 500ms ease-in-out both;
+  animation-delay: 1165ms;
 }
 .meal:nth-child(3) .meal__card:nth-child(4) {
-  animation: appears 0.3s ease-in-out both;
-  animation-delay: 1.2s;
+  animation: appears 500ms ease-in-out both;
+  animation-delay: 1295ms;
+}
+.meal:nth-child(3) .meal__card:nth-child(5) {
+  animation: appears 500ms ease-in-out both;
+  animation-delay: 1425ms;
 }
 .meal:nth-child(4) {
-  animation-delay: 0.8s;
+  animation-delay: 1550ms;
 }
 .meal:nth-child(4) .meal__card:nth-child(2) {
-  animation: appears 0.3s ease-in-out both;
-  animation-delay: 1.2s;
+  animation: appears 500ms ease-in-out both;
+  animation-delay: 1810ms;
 }
 .meal:nth-child(4) .meal__card:nth-child(3) {
-  animation: appears 0.3s ease-in-out both;
-  animation-delay: 1.4s;
+  animation: appears 500ms ease-in-out both;
+  animation-delay: 1940ms;
 }
 .meal:nth-child(4) .meal__card:nth-child(4) {
-  animation: appears 0.3s ease-in-out both;
-  animation-delay: 1.6s;
+  animation: appears 500ms ease-in-out both;
+  animation-delay: 2070ms;
+}
+.meal:nth-child(4) .meal__card:nth-child(5) {
+  animation: appears 500ms ease-in-out both;
+  animation-delay: 2200ms;
 }
 .meal h2 {
   text-transform: uppercase;
@@ -499,7 +529,11 @@ header i:hover {
 @keyframes appears {
   0% {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(30px);
+  }
+  61% {
+    opacity: 0.9;
+    transform: translateY(-3px);
   }
   100% {
     opacity: 1;

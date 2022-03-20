@@ -6,7 +6,7 @@
 }
 .card-restaurant{
     position: relative;
-    height: 65vw;
+    height: 325px;
     margin-bottom: map-get($sizes, base);
     background-color: $color-background;
     border-radius: map-get($sizes, base);
@@ -34,7 +34,7 @@
         color: $color-tertiary-dark;
     }
     &__description{
-        padding: 4%;
+        padding: map-get($sizes, small);
         display: flex;
         justify-content: space-between;
         align-items: center;

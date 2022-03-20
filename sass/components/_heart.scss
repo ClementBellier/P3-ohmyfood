@@ -1,24 +1,22 @@
 .heart{
     position: relative;
     cursor: pointer;
-    font-size: map-get($font-sizes , heart);
+    font-size: min(map-get($font-sizes , heart),map-get($font-sizes , menu-title));
     .far{
         position: absolute;
-        transition: opacity 0.3s 0.2s;
+        top: 1px;
     }
     .fas{
         color: transparent;
         background: linear-gradient(200deg, $color-primary, $color-secondary);
         background-clip: text;
+        -webkit-background-clip: text; // Pour Chrome
         transform: scale(0);
         transition: transform 0.3s ease-in;
     }
     &:hover{
         .fas{
-            transform: scale(1);
-        }
-        .far{
-            opacity: 0;
+            transform: scale(1.1);
         }
     }
 }
