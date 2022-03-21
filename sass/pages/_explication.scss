@@ -10,7 +10,7 @@
         }
         .operating{
             width: 50%;
-            margin: 0;
+            margin: map-get($sizes, small) 0;
         }
     }
 }
