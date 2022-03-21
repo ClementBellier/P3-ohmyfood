@@ -10,9 +10,7 @@ main{
 main{
     display: flex;
     flex-direction: column;
-}
-@media (min-width: 992px) {
-    main{
+    @media (min-width: 992px) {
         flex-flow: row wrap;
         justify-content: space-around;
         .card-restaurant{
@@ -21,10 +19,6 @@ main{
         .meal{
             width: 30%;
         }
-        // button{
-        //     align-self: center;
-        //     width: 40%;
-        // }
         h2{ width: 95%;}
     }
 }

@@ -4,11 +4,11 @@ $anim-delay: 0;
     margin: map-get($sizes, base) auto 0;
     font-size: map-get($font-sizes , base-plus);
     animation: appears 350ms ease-in-out both;
-    @for $i from 2 through 4{
+    @for $i from 1 through 3{
         &:nth-child(#{$i}){
-            $anim-delay: 775ms * ($i - 2);
+            $anim-delay: 775ms * ($i - 1);
             animation-delay: $anim-delay;
-            @for $j from 2 through 5{
+            @for $j from 1 through 5{
                 & .meal__card:nth-child(#{$j}){
                     animation: appears 500ms ease-in-out both;
                     animation-delay: 130ms * ($j) + $anim-delay;

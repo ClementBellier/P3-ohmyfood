@@ -8,7 +8,7 @@ footer{
         font-weight: 100;
         margin: map-get($sizes, base) 0;
         &:hover{
-            color: $color-primary;
+            color: $color-secondary;
         }
     }
     li{
@@ -27,7 +27,7 @@ footer{
             content: '\f4c4';
         }
         &:hover{
-            color: $color-primary;
+            color: $color-tertiary;
         }
     }
 }

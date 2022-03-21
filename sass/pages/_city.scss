@@ -1,0 +1,14 @@
+.city{
+    text-align: center;
+    width: 100vw;
+    background-color: $color-darken-light;
+    border-top: $color-darken-dark 2px solid;
+    color: $color-darken-darker;
+    @include vertical-center(70px);
+    font-size: map-get($font-sizes , base-plus);
+    &::before{
+        font-family: 'Font Awesome 5 Free';
+        content: '\f3c5';
+        padding-right: map-get($sizes, small);
+    }
+}

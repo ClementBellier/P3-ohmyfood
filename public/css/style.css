@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
-*, h1 {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -31,7 +31,6 @@ main {
   display: flex;
   flex-direction: column;
 }
-
 @media (min-width: 992px) {
   main {
     flex-flow: row wrap;
@@ -47,6 +46,7 @@ main {
     width: 95%;
   }
 }
+
 .loader {
   position: absolute;
   width: 100vw;
@@ -156,11 +156,11 @@ button {
   border-radius: 30px;
   border: none;
   color: white;
+  font-size: 1.1em;
   font-weight: 500;
   background: linear-gradient(352deg, #9356DC 0%, #FF79DA 100%);
   box-shadow: 2px 2px 8px 0 gray;
   cursor: pointer;
-  transition: transform 0.2s;
   position: relative;
   z-index: 1;
   display: block;
@@ -227,10 +227,28 @@ header i:hover {
   color: #9356DC;
 }
 
-.explore {
-  text-align: center;
+.explication {
+  display: flex;
+  flex-direction: column;
 }
-.explore h4 {
+@media (min-width: 992px) {
+  .explication {
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  .explication .explore {
+    width: 50%;
+    background-color: white;
+  }
+  .explication .operating {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+.city {
+  text-align: center;
+  width: 100vw;
   background-color: #e0e0e0;
   border-top: gray 2px solid;
   color: #333333;
@@ -238,22 +256,24 @@ header i:hover {
   line-height: 70px;
   font-size: 1.1em;
 }
-.explore h4::before {
+.city::before {
   font-family: "Font Awesome 5 Free";
   content: "\f3c5";
   padding-right: 15px;
 }
-.explore__intro {
+
+.explore {
+  text-align: center;
   background-color: #f2f2f2;
   padding: 50px 5%;
 }
-.explore__intro h1 {
+.explore h1 {
   font-size: 1.9em;
   font-weight: 700;
   margin: 20px auto;
   width: 75%;
 }
-.explore__intro p {
+.explore p {
   font-size: 1.4em;
   color: gray;
 }
@@ -334,16 +354,25 @@ header i:hover {
   background-color: white;
   border-radius: 20px;
   box-shadow: 2px 2px 8px 0 gray;
-  transition: transform 0.2s;
+  transition: box-shadow 0.5s, transform 0.3s;
 }
 .card-restaurant:hover {
   box-shadow: 4px 4px 14px 2px gray;
 }
-.card-restaurant img {
+.card-restaurant:hover img {
+  transform: scale(1.2) rotate(3deg);
+}
+.card-restaurant__image {
   border-radius: 20px 20px 0 0;
   height: 70%;
   width: 100%;
+  overflow: hidden;
+}
+.card-restaurant img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  transition: all 0.3s;
 }
 .card-restaurant .new {
   height: 40px;
@@ -393,60 +422,72 @@ header i:hover {
   font-size: 1.1em;
   animation: appears 350ms ease-in-out both;
 }
-.meal:nth-child(2) {
+.meal:nth-child(1) {
   animation-delay: 0ms;
 }
-.meal:nth-child(2) .meal__card:nth-child(2) {
+.meal:nth-child(1) .meal__card:nth-child(1) {
+  animation: appears 500ms ease-in-out both;
+  animation-delay: 130ms;
+}
+.meal:nth-child(1) .meal__card:nth-child(2) {
   animation: appears 500ms ease-in-out both;
   animation-delay: 260ms;
 }
-.meal:nth-child(2) .meal__card:nth-child(3) {
+.meal:nth-child(1) .meal__card:nth-child(3) {
   animation: appears 500ms ease-in-out both;
   animation-delay: 390ms;
 }
-.meal:nth-child(2) .meal__card:nth-child(4) {
+.meal:nth-child(1) .meal__card:nth-child(4) {
   animation: appears 500ms ease-in-out both;
   animation-delay: 520ms;
 }
-.meal:nth-child(2) .meal__card:nth-child(5) {
+.meal:nth-child(1) .meal__card:nth-child(5) {
   animation: appears 500ms ease-in-out both;
   animation-delay: 650ms;
 }
-.meal:nth-child(3) {
+.meal:nth-child(2) {
   animation-delay: 775ms;
 }
-.meal:nth-child(3) .meal__card:nth-child(2) {
+.meal:nth-child(2) .meal__card:nth-child(1) {
+  animation: appears 500ms ease-in-out both;
+  animation-delay: 905ms;
+}
+.meal:nth-child(2) .meal__card:nth-child(2) {
   animation: appears 500ms ease-in-out both;
   animation-delay: 1035ms;
 }
-.meal:nth-child(3) .meal__card:nth-child(3) {
+.meal:nth-child(2) .meal__card:nth-child(3) {
   animation: appears 500ms ease-in-out both;
   animation-delay: 1165ms;
 }
-.meal:nth-child(3) .meal__card:nth-child(4) {
+.meal:nth-child(2) .meal__card:nth-child(4) {
   animation: appears 500ms ease-in-out both;
   animation-delay: 1295ms;
 }
-.meal:nth-child(3) .meal__card:nth-child(5) {
+.meal:nth-child(2) .meal__card:nth-child(5) {
   animation: appears 500ms ease-in-out both;
   animation-delay: 1425ms;
 }
-.meal:nth-child(4) {
+.meal:nth-child(3) {
   animation-delay: 1550ms;
 }
-.meal:nth-child(4) .meal__card:nth-child(2) {
+.meal:nth-child(3) .meal__card:nth-child(1) {
+  animation: appears 500ms ease-in-out both;
+  animation-delay: 1680ms;
+}
+.meal:nth-child(3) .meal__card:nth-child(2) {
   animation: appears 500ms ease-in-out both;
   animation-delay: 1810ms;
 }
-.meal:nth-child(4) .meal__card:nth-child(3) {
+.meal:nth-child(3) .meal__card:nth-child(3) {
   animation: appears 500ms ease-in-out both;
   animation-delay: 1940ms;
 }
-.meal:nth-child(4) .meal__card:nth-child(4) {
+.meal:nth-child(3) .meal__card:nth-child(4) {
   animation: appears 500ms ease-in-out both;
   animation-delay: 2070ms;
 }
-.meal:nth-child(4) .meal__card:nth-child(5) {
+.meal:nth-child(3) .meal__card:nth-child(5) {
   animation: appears 500ms ease-in-out both;
   animation-delay: 2200ms;
 }
@@ -552,7 +593,7 @@ footer h2 {
   margin: 20px 0;
 }
 footer h2:hover {
-  color: #9356DC;
+  color: #FF79DA;
 }
 footer li {
   margin-bottom: 10px;
@@ -571,7 +612,7 @@ footer li:nth-child(2)::before {
   content: "\f4c4";
 }
 footer li:hover {
-  color: #9356DC;
+  color: #99E2D0;
 }
 
 /*# sourceMappingURL=style.css.map */

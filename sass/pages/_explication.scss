@@ -1,0 +1,16 @@
+.explication{
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 992px) {
+        flex-flow: row wrap;
+        align-items: center;
+        .explore{
+            width: 50%;
+            background-color: $color-background;
+        }
+        .operating{
+            width: 50%;
+            margin: 0;
+        }
+    }
+}

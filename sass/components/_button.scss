@@ -5,11 +5,11 @@ button{
     border-radius: map-get($sizes, large);
     border: none;
     color: $color-background;
+    font-size: map-get($font-sizes, base-plus);
     font-weight: 500;
     background: $color-btn;
     @include box-shadow($color-primary);
     cursor: pointer;
-    transition: transform 0.2s;
     position: relative;
     z-index: 1;
     display: block;
