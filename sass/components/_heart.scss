@@ -10,7 +10,7 @@
         color: transparent;
         background: linear-gradient(200deg, $color-primary, $color-secondary);
         background-clip: text;
-        -webkit-background-clip: text; // Pour Chrome
+        -webkit-background-clip: text; // For Chrome
         transform: scale(0);
         transition: transform 0.3s ease-in;
     }
