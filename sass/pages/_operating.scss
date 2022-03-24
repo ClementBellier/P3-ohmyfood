@@ -10,6 +10,7 @@
         margin-left: map-get($sizes, percent);
         width: auto;
         @include vertical-center(70px);
+        white-space: nowrap;
         background-color: $color-darken-lighter;
         border-radius: map-get($sizes, base);
         font-weight: 500;
