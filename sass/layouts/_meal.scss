@@ -1,8 +1,8 @@
 $anim-delay: 0;
 .meal{
     width: 95%;
-    margin: map-get($sizes, base) auto 0;
-    font-size: map-get($font-sizes , base-plus);
+    margin: map-get($margins, height) auto 0;
+    font-size: map-get($font-sizes, button-mealText-cityName-operatingIcon);
     animation: appears 350ms ease-in-out both;
     @for $i from 1 through 3{
         &:nth-child(#{$i}){
@@ -19,7 +19,7 @@ $anim-delay: 0;
     h2{
         text-transform: uppercase;
         font-weight: 300;
-        padding-bottom: map-get($sizes, smaller);
+        padding-bottom: map-get($paddings, texts);
         position: relative;
         &::before{
             content: '';
@@ -35,14 +35,14 @@ $anim-delay: 0;
         justify-content: space-between;
         align-items: center;
         background: $color-background;
-        border-radius: map-get($sizes, base);
+        border-radius: map-get($border-radius, cards);
         height: 80px;
-        margin: map-get($sizes, base) 0;
+        margin: map-get($margins, height) 0;
         overflow: hidden;
-        @include box-shadow($color-darken-lighter);
+        @include box-shadow($color-background-lighter);
         &--text{
             width: 88%;
-            padding: map-get($sizes, small);
+            padding: map-get($paddings, texts);
             padding-right: 0;
             overflow: hidden;
             flex-shrink: 0;
@@ -69,14 +69,14 @@ $anim-delay: 0;
             p{
                 align-self: flex-end;
                 flex-grow: 1;
-                padding-bottom: map-get($sizes, small);
+                padding-bottom: map-get($paddings, texts);
             }
             div{
                 @include vertical-center(80px);
                 flex-grow: 1;
                 background-color: $color-tertiary;
                 color: $color-background;
-                font-size: map-get($font-sizes , large);
+                font-size: map-get($font-sizes, bigIcons-subtitle-logoFooter);
                 i{
                     transform: rotate(-1turn);
                     transition: transform 0.5s 0.1s;
@@ -96,7 +96,7 @@ $anim-delay: 0;
     }
 }
 @keyframes appears {
-    0%{opacity: 0; transform: translateY(map-get($sizes, large));}
-    61%{opacity: 0.9; transform: translateY(-3px);}
+    0%{opacity: 0; transform: translateY($translate-menu-down);}
+    61%{opacity: 0.9; transform: translateY($translate-menu-up);}
     100%{opacity: 1; transform: translateY(0);}
 }

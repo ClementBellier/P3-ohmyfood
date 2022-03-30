@@ -1,28 +1,28 @@
 .operating{
-    padding: 0 map-get($sizes, percent);
-    margin: map-get($sizes, larger) 0;
+    padding: 0 map-get($paddings, percent);
+    margin: map-get($margins, operating) 0;
     h2{
-        margin-bottom: map-get($sizes, large);
+        margin-bottom: map-get($margins, card-operating);
     }
     &__card{
         position: relative;
-        margin-bottom: map-get($sizes, large);
-        margin-left: map-get($sizes, percent);
+        margin-bottom: map-get($margins, card-operating);
+        margin-left: map-get($margins, card-percent);
         width: auto;
         @include vertical-center(70px);
         white-space: nowrap;
-        background-color: $color-darken-lighter;
-        border-radius: map-get($sizes, base);
+        background-color: $color-background-lighter;
+        border-radius: map-get($border-radius, cards);
         font-weight: 500;
-        @include box-shadow($color-darken-lighter);
+        @include box-shadow($color-background-lighter);
         @include number-content;
         @media (max-width: 360px) {
-            font-size: map-get($font-sizes , small);
+            font-size: map-get($font-sizes, operating-text-mediaqueries);
         }
         i{
-            margin-left: map-get($sizes, smaller);
-            color: $color-darken-dark;
-            font-size: map-get($font-sizes , base-plus);
+            margin-left: map-get($margins, li-and-i);
+            color: $color-background-dark;
+            font-size: map-get($font-sizes, button-mealText-cityName-operatingIcon);
             width: 15%;
             text-align: center;
             display: inline-block;
@@ -36,8 +36,8 @@
             width: 25px;
             background-color: $color-primary;
             color: $color-background;
-            border-radius: 50%;
-            font-size: map-get($font-sizes , before);
+            border-radius: map-get($border-radius, rounds);
+            font-size: map-get($font-sizes, before-card-operating);
             text-align: center;
         }
         &:last-child{

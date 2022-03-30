@@ -1,10 +1,10 @@
 body{
     font-family: 'Roboto';
-    font-size: map-get($font-sizes , base);
+    font-size: map-get($font-sizes, base);
     background-color: $color-background;
 }
 main{
-    background-color: $color-darken-lighter;
+    background-color: $color-background-lighter;
     padding-bottom: 80px;
 }
 main{

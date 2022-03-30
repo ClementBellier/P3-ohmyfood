@@ -6,10 +6,10 @@ $color-background: white;
 $color-primary-light: lighten($color-primary, 35%);
 $color-tertiary-dark: darken($color-tertiary, 35%);
 
-$color-darken-lighter: darken($color-background, 5%);
-$color-darken-light: darken($color-background, 12%);
-$color-darken-dark: darken($color-background, 50%);
-$color-darken-darker: darken($color-background, 80%);
+$color-background-lighter: darken($color-background, 5%);
+$color-background-light: darken($color-background, 12%);
+$color-background-dark: darken($color-background, 50%);
+$color-background-darker: darken($color-background, 80%);
 
 $color-btn: linear-gradient(352deg, $color-primary 0%, $color-secondary 100%);
 $color-btn-hover: linear-gradient(352deg, lighten($color-primary,5%) 0%, lighten($color-secondary, 5%) 100%);

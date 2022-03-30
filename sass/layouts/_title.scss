@@ -10,13 +10,13 @@
         justify-content: space-between;
         align-items: baseline;
         margin-top: -65px;
-        padding: map-get($sizes, large) map-get($sizes, percent) map-get($sizes, smaller);
-        border-radius: map-get($sizes, larger) map-get($sizes, larger) 0 0;
-        background-color: $color-darken-lighter;
+        padding: map-get($paddings, footer-and-titles) map-get($paddings, percent) map-get($paddings, texts);
+        border-radius: map-get($border-radius, title) map-get($border-radius, title) 0 0;
+        background-color: $color-background-lighter;
         position: relative;
         h1{
             font-family: 'Shrikhand';
-            font-size: min(map-get($font-sizes , menu-title), 50px);
+            font-size: min(map-get($font-sizes, menu-title), 50px);
         }
     }
 }

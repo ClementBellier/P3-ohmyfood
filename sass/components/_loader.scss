@@ -11,7 +11,7 @@
     .dot{
       width: 30px;
       height: 30px;
-      border-radius: 100%;
+      border-radius: map-get($border-radius, rounds);
       @for $i from 1 through 5{
       &:nth-child(#{$i}){
         animation: loading 0.7s (0.08s * $i) 2, up-#{$i} 0.8s 1.2s cubic-bezier(0.68,-0.55, 0.9, 0.76) both;

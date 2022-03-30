@@ -1,15 +1,15 @@
 #restaurants{
-    padding: map-get($sizes, larger) map-get($sizes, percent);
+    padding: map-get($paddings, height) map-get($paddings, percent);
     h2{
-        margin-bottom: map-get($sizes, base);
+        margin-bottom: map-get($margins, height);
     }
 }
 .card-restaurant{
     position: relative;
     height: 325px;
-    margin-bottom: map-get($sizes, base);
+    margin-bottom: map-get($margins, height);
     background-color: $color-background;
-    border-radius: map-get($sizes, base);
+    border-radius: map-get($border-radius, cards);
     @include box-shadow($color-background);
     transition: box-shadow 0.5s, transform 0.3s;
     &:hover{
@@ -19,7 +19,7 @@
         }
     }
     &__image{
-        border-radius: map-get($sizes, base) map-get($sizes, base) 0 0;
+        border-radius: map-get($border-radius, cards) map-get($border-radius, cards) 0 0;
         height: 70%;
         width: 100%;
         overflow: hidden;
@@ -37,16 +37,19 @@
         top: 5%;
         width: 100px;
         text-align: center;
-        font-weight: 600;
-        border-radius: map-get($sizes, percent);
+        font-weight: 500;
+        border-radius: map-get($border-radius, new);
         background-color: $color-tertiary;
         color: $color-tertiary-dark;
     }
     &__description{
-        padding: map-get($sizes, small);
+        padding: map-get($paddings, texts);
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-size: map-get($font-sizes , card-text);
+        font-size: map-get($font-sizes, card-text);
+        p{
+            font-weight: 300;
+        }
     }
 }

@@ -1,23 +1,40 @@
-$sizes: ( // For margins, paddings or border
-    base: 20px,
-    smaller: 10px,
-    small: 15px,
-    large: 30px,
-    larger: 50px,
+$margins: (
+    li-and-i: 10px,
+    height-small: 15px,
+    height: 20px,
+    card-operating: 30px,
+    operating: 50px,
+    card-percent: 5%
+);
+$paddings: (
+    logo: 10px,
+    texts: 15px,
+    button: 20px,
+    footer-and-titles: 30px,
+    height: 50px,
     percent: 5%
+);
+$border-radius: (
+    cards: 20px,
+    button: 30px,
+    title: 50px,
+    new: 5%,
+    rounds: 50%
 );
 $font-sizes:(
     base: 18px,
-    small: 0.8em,
-    base-plus: 1.1em,
-    large: 1.4em,
-    larger: 1.9em,
-    before: 12px,
+    operating-text-mediaqueries: 0.8em,
+    button-mealText-cityName-operatingIcon: 1.1em,
+    bigIcons-subtitle-logoFooter: 1.4em,
+    h-one: 1.9em,
+    before-card-operating: 12px,
     heart: 35px,
     menu-title: 7vw,
     card-text: 20px
 );
 
+$translate-menu-down: 30px;
+$translate-menu-up: -3px;
 // For loader animation
 $dot-down: (60px, 30px, 0, 30px, 60px);
 $dot-up: (0, -30px, -120px, -60px, 0);

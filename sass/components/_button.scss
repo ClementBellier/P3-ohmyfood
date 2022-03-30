@@ -1,11 +1,11 @@
 button{
     height: 60px;
-    padding: 0 map-get($sizes, base);
-    margin: map-get($sizes, base) auto;
-    border-radius: map-get($sizes, large);
+    padding: 0 map-get($paddings, button);
+    margin: map-get($margins, height) auto;
+    border-radius: map-get($border-radius, button);
     border: none;
     color: $color-background;
-    font-size: map-get($font-sizes, base-plus);
+    font-size: map-get($font-sizes, button-mealText-cityName-operatingIcon);
     font-weight: 500;
     background: $color-btn;
     @include box-shadow($color-primary);
@@ -27,7 +27,7 @@ button{
         right: 0;
         bottom: 0;
         left: 0;
-        border-radius: map-get($sizes, large);
+        border-radius: map-get($border-radius, button);
         z-index: -1;
         @include box-shadow('hover');
         background: $color-btn-hover;

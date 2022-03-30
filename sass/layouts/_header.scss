@@ -3,7 +3,7 @@ header{
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: map-get($sizes, smaller) 0;
+    padding: map-get($paddings, logo) 0;
     img{
         width: min(250px, 50%);
     }
@@ -12,8 +12,8 @@ header{
         top: 50%;
         left: 5%;
         transform: translateY(-50%);
-        font-size: map-get($font-sizes , large);
-        color: $color-darken-darker;
+        font-size: map-get($font-sizes, bigIcons-subtitle-logoFooter);
+        color: $color-background-darker;
         &:hover{
             color: $color-primary;
         }
