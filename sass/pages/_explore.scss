@@ -1,15 +1,15 @@
 .explore{
     text-align: center;    
-    background-color: $color-darken-lighter;
-    padding: map-get($sizes, larger) map-get($sizes, percent);
+    background-color: $color-background-lighter;
+    padding: map-get($paddings, height) map-get($paddings, percent);
     h1{
-        font-size: map-get($font-sizes , larger);
+        font-size: map-get($font-sizes, h-one);
         font-weight: 700;
-        margin: map-get($sizes, base) auto;
+        margin: map-get($margins, height) auto;
         width: 75%;
     }
     p{
-        font-size: map-get($font-sizes , large);
-        color: $color-darken-dark;
+        font-size: map-get($font-sizes, bigIcons-subtitle-logoFooter);
+        color: $color-background-dark;
     }
 }

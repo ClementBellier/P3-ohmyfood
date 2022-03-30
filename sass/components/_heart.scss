@@ -1,7 +1,7 @@
 .heart{
     position: relative;
     cursor: pointer;
-    font-size: min(map-get($font-sizes , heart),map-get($font-sizes , menu-title));
+    font-size: min(map-get($font-sizes, heart),map-get($font-sizes, menu-title));
     .far{
         position: absolute;
         top: 1px;

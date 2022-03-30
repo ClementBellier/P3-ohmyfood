@@ -1,18 +1,18 @@
 footer{
-    background-color: $color-darken-darker;
+    background-color: $color-background-darker;
     color: $color-background;
-    padding: map-get($sizes, base) map-get($sizes, large);
+    padding: map-get($paddings, footer-and-titles);
     h2{
         font-family: 'Shrikhand';
-        font-size: map-get($font-sizes , large);
+        font-size: map-get($font-sizes, bigIcons-subtitle-logoFooter);
         font-weight: 100;
-        margin: map-get($sizes, base) 0;
+        margin: map-get($margins, height) 0;
         &:hover{
             color: $color-secondary;
         }
     }
     li{
-        margin-bottom: map-get($sizes, smaller);
+        margin-bottom: map-get($margins, li-and-i);
         font-weight: 500;
         &::before{
             display: inline-block;

@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+@import url("https://unpkg.com/@csstools/normalize.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap");
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -61,7 +62,7 @@ main {
 .loader .dot {
   width: 30px;
   height: 30px;
-  border-radius: 100%;
+  border-radius: 50%;
 }
 .loader .dot:nth-child(1) {
   animation: loading 0.7s 0.08s 2, up-1 0.8s 1.2s cubic-bezier(0.68, -0.55, 0.9, 0.76) both;
@@ -383,7 +384,7 @@ header i:hover {
   top: 5%;
   width: 100px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 5%;
   background-color: #99E2D0;
   color: #2c9c81;
@@ -407,7 +408,7 @@ header i:hover {
   justify-content: space-between;
   align-items: baseline;
   margin-top: -65px;
-  padding: 30px 5% 10px;
+  padding: 30px 5% 15px;
   border-radius: 50px 50px 0 0;
   background-color: #f2f2f2;
   position: relative;
@@ -495,7 +496,7 @@ header i:hover {
 .meal h2 {
   text-transform: uppercase;
   font-weight: 300;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   position: relative;
 }
 .meal h2::before {
@@ -585,7 +586,7 @@ header i:hover {
 footer {
   background-color: #333333;
   color: white;
-  padding: 20px 30px;
+  padding: 30px;
 }
 footer h2 {
   font-family: "Shrikhand";
