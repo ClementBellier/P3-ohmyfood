@@ -10,10 +10,9 @@
         $spread: 2px;
         $color: $color-background-dark;
         $opacity: 1;
-    }@else{
-        @if ($color-parametre == $color-background-lighter){
+    }
+    @if ($color-parametre == $color-background-lighter){
             $opacity: 30%;
-        }
     }
     box-shadow: $offset $offset $blur $spread rgb($color, $opacity);
 }
